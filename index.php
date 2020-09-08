@@ -158,6 +158,7 @@ foreach ($firstArr as $key => $value) {
 
 
 echo '<h3>получить общее количество элементов в массиве</h3>';
+/* Не верно
 $num = 0;
 foreach ($firstArr as $key => $value) {
   if (!is_array($firstArr[$key])) {
@@ -167,7 +168,12 @@ foreach ($firstArr as $key => $value) {
      }
   
 }
+*/
+$num = count($firstArr, COUNT_RECURSIVE);
 echo 'Ответ: общее количество элементов в массиве - '.$num.'<br>';
+
+
+
 
 echo '<h3>получить сумму всех значений в массиве</h3>';
 $sum = 0;
